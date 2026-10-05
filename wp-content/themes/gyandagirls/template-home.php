@@ -476,16 +476,12 @@ if ($what_students_say) :
                 <?php if ($section_image_url) : ?>
                     <img src="<?php echo esc_url($section_image_url); ?>" alt="<?php echo esc_attr($section_title); ?>" class="students-say-video-thumbnail">
                 <?php endif; ?>
-                <?php if ($video_url) : ?>
-                    <a href="<?php echo esc_url($video_url); ?>" class="students-video-btn" target="_blank" rel="noopener" aria-label="Watch video">
-                        <span class="play-icon"></span>
-                    </a>
-                <?php endif; ?>
+                <a href="<?php echo esc_url($video_url); ?>" class="students-video-btn" target="_blank" rel="noopener" aria-label="Watch video"></a>
             </div>
             <div class="students-say-content">
                 <div class="students-say-card">
                     <?php if ($section_title) : ?>
-                        <h2><?php echo esc_html($section_title); ?></h2>
+                        <h2 class="section-title mb-2"><?php echo esc_html($section_title); ?></h2>
                     <?php endif; ?>
                     <?php if ($section_description) : ?>
                         <p class="students-say-intro"><?php echo esc_html($section_description); ?></p>
@@ -530,7 +526,13 @@ if ($what_students_say) :
                                                 <?php if ($rating) : ?>
                                                     <div class="student-rating">
                                                         <?php for ($i = 1; $i <= 5; $i++) : ?>
-                                                            <span class="<?php echo $i <= (int) $rating ? 'active' : ''; ?>">★</span>
+                                                            <?php if ($rating >= $i) : ?>
+                                                                <i class="fas fa-star"></i>
+                                                            <?php elseif ($rating >= ($i - 0.5)) : ?>
+                                                                <i class="fas fa-star-half-alt"></i>
+                                                            <?php else : ?>
+                                                                <i class="far fa-star"></i>
+                                                            <?php endif; ?>
                                                         <?php endfor; ?>
                                                     </div>
                                                 <?php endif; ?>
@@ -544,12 +546,11 @@ if ($what_students_say) :
                             <?php endforeach; ?>
                         </div>
                         <div class="students-say-arrows">
-                            <button type="button" class="students-say-prev" aria-label="Previous testimonial">←</button>
-                            <button type="button" class="students-say-next" aria-label="Next testimonial">→</button>
+                            <button type="button" class="students-say-prev" aria-label="Previous testimonial"><i class="fa-solid fa-arrow-left-long"></i></button>
+                            <button type="button" class="students-say-next" aria-label="Next testimonial"><i class="fa-solid fa-arrow-right-long"></i></button>
                         </div>
                     </div>
-                    <span class="quote-mark quote-mark-top">“</span>
-                    <span class="quote-mark quote-mark-bottom">”</span>
+                    <span class="quote-mark"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/quote-mark.svg" class="w-100" /></span>
                 </div>
             </div>
         </div>
