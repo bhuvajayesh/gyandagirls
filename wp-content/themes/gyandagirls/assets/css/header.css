@@ -1,0 +1,27 @@
+.headermain {
+  padding: 0;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 9;
+}
+
+.site-header {
+  padding: 16px 0;
+  background: #ffffff;
+}
+
+.logo-icon {
+  height: 70px;
+}
+
+.site-header .header-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.no-click>a {
+  pointer-events: none;
+}
