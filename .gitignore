@@ -1,48 +1,45 @@
-# WordPress core
-/wp-admin/
-/wp-includes/
-
 # WordPress uploads
-/wp-content/uploads/
+wp-content/uploads/
+
+# WordPress config
+wp-config.php
 
 # Cache
-/wp-content/cache/
-/wp-content/litespeed/
-/wp-content/upgrade/
-/wp-content/backup*/
+wp-content/cache/
+wp-content/wflogs/
+wp-content/upgrade/
 
-# Sensitive configuration
-/wp-config.php
-/.env
-/.env.*
+# Backup files
+*.zip
+*.sql
+*.gz
 
 # Logs
 *.log
+error_log
+debug.log
 
 # OS files
 .DS_Store
 Thumbs.db
-desktop.ini
 
-# IDE / Editor
+# IDE files
 .vscode/
 .idea/
-
-# Temporary files
-*.tmp
-*.temp
-*.bak
-*.swp
 
 # Node
 node_modules/
 
-# Build files
-dist/
-build/
+# Composer
+vendor/
 
-# PHP Composer
-/vendor/
+# Environment files
+.env
+.env.local
 
-# WordPress debug
-debug.log
+# XAMPP temp files
+xampp/
+
+# Elementor cache
+wp-content/uploads/elementor/css/
+wp-content/uploads/elementor/google-fonts/
