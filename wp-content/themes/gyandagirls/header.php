@@ -56,7 +56,7 @@
                         wp_nav_menu(array(
                             'theme_location' => 'primary_menu',
                             'container' => 'nav',
-                            'menu_class' => '',
+                            'menu_class' => 'navbar-list',
                         ));
                         ?>
                     </nav>

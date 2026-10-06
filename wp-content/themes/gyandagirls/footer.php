@@ -9,130 +9,74 @@
                         <img src="<?php echo get_template_directory_uri(); ?>/assets/images/logo.svg" alt="Logo"
                             class="logo-icon">
                     </a>
-                    <p class="my-3">
-                        If your smile is not becoming you, then you should be
-                        coming to us! Family Dentistry with a gentle touch.
-                        Connect with us today!
+                    <p class="my-2">
+                        Welcome to Gyanda Girls' High School - “A school which enlighten your imagination !”In life a
+                        few decisions are as important- and potentially life-changing as choosing a school for your
+                        child.
                     </p>
                     <div class="footer-social">
-                        <a href="https://www.facebook.com/ExcelDentalLowell" target="_blank"><i class="fa-brands fa-facebook"></i></a>
-                        <a href="<?php echo site_url(); ?>/blog"><i class="fa-solid fa-rss"></i></a>
+                        <a href="https://www.facebook.com/gyandagirls/" target="_blank"><i
+                                class="fa-brands fa-facebook"></i></a>
                     </div>
                 </div>
                 <!-- Column 2 -->
                 <div class="footer-links">
-                    <h4>Links</h4>
+                    <h4>Quick Links</h4>
                     <ul>
-                        <li><a href="#">About Us</a></li>
-                        <li><a href="#">New Patients</a></li>
-                        <li><a href="#">Testimonials</a></li>
-                        <li><a href="#">Contact Us</a></li>
-                        <li><a href="#">Disclaimer</a></li>
-                        <li><a href="#">Patient Privacy</a></li>
+                        <li><a href="#">Activities</a></li>
+                        <li><a href="#">Facilities</a></li>
+                        <li><a href="#">Gallery</a></li>
+                        <li><a href="#">Faculties</a></li>
+                        <li><a href="#">Events</a></li>
+                        <li><a href="#">Award of Appreciation</a></li>
+                        <li><a href="#">Results</a></li>
                     </ul>
                 </div>
                 <!-- Column 3 -->
                 <div class="footer-links">
-                    <h4>Services</h4>
-                    <div class="footer-service-grid">
-                        <ul>
-                            <li><a href="#">Dental Implants</a></li>
-                            <li><a href="#">Veneers</a></li>
-                            <li><a href="#">Teeth Whitening</a></li>
-                            <li><a href="#">Root Canal Treatment</a></li>
-                            <li><a href="#">Dentistry for Kids</a></li>
-                            <li><a href="#">Dentures</a></li>
-                            <li><a href="#">Dental Aligners</a></li>
-                        </ul>
-                        <ul>
-                            <li><a href="#">Scaling & Root Planning</a></li>
-                            <li><a href="#">Crowns & Bridges</a></li>
-                            <li><a href="#">Extractions</a></li>
-                            <li><a href="#">Fillings</a></li>
-                            <li><a href="#">Emergency Care</a></li>
-                            <li><a href="#">Dental Check-ups</a></li>
-                        </ul>
-                    </div>
+                    <h4>The School</h4>
+                    <ul>
+                        <li><a href="#">About School</a></li>
+                        <li><a href="#">Chairman Message</a></li>
+                        <li><a href="#">Admission Process</a></li>
+                        <li><a href="#">Testimonials</a></li>
+                        <li><a href="#">Timing</a></li>
+                    </ul>
                 </div>
                 <!-- Column 4 -->
-                <div class="footer-links location-links">
-                    <h4>Locations</h4>
-                    <ul>
-                        <li>
-                            <div class="f-location-name">
-                                <a href="#">Lowell- Bridge Street</a>
-                                <span>-</span>
-                                <a href="tel:+19782888260" class="text-light-green">Call Now</a>
+                <div class="footer-links footer-contact-info">
+                    <h4>Contact Us</h4>
+                    <ul class="ps-0">
+                        <li class="f-contact-list mb-1">
+                            <div class="icon">
+                                <i class="fa-solid fa-location-dot"></i>
                             </div>
+                            <span>Gyanda Girls' Higher Secondary School Opp. Vidhata Society, Rannapark, K K Nagar
+                                Road, Ghatlodia, Ahmedabad - 380061</span>
                         </li>
-                        <li>
-                            <div class="f-location-name">
-                                <a href="#">Excel Dental Lowell</a>
-                                <span>-</span>
-                                <a href="tel:+19786772114" class="text-light-green">Call Now</a>
+                        <li class="f-contact-list mb-1">
+                            <div class="icon">
+                                <i class="fa-solid fa-envelope"></i>
                             </div>
+                            <a href="mailto:gyanda_girls@yahoo.com">gyanda_girls@yahoo.com</a>
                         </li>
-                        <li>
-                            <div class="f-location-name">
-                                <a href="#">Excel Dental Billerica</a>
-                                <span>-</span>
-                                <a href="tel:+19783621970" class="text-light-green">Call Now</a>
+                        <li class="f-contact-list">
+                            <div class="icon">
+                                <i class="fa-solid fa-phone-volume"></i>
                             </div>
-                        </li>
-                        <li>
-                            <div class="f-location-name">
-                                <a href="#">Excel Dental Methuen</a>
-                                <span>-</span>
-                                <a href="tel:+19782582377" class="text-light-green">Call Now</a>
-                            </div>
-                        </li>
-                        <li>
-                            <div class="f-location-name">
-                                <a href="#">Excel Dental Haverhill</a>
-                                <span>-</span>
-                                <a href="tel:+19789146333" class="text-light-green">Call Now</a>
-                            </div>
-                        </li>
-                        <li>
-                            <div class="f-location-name">
-                                <a href="#">Excel Dental Everett</a>
-                                <span>-</span>
-                                <a href="tel:+16172942600" class="text-light-green">Call Now</a>
-                            </div>
-                        </li>
-                        <li>
-                            <div class="f-location-name">
-                                <a href="#">Excel Dental Chelsea</a>
-                                <span>-</span>
-                                <a href="tel:+16174662277" class="text-light-green">Call Now</a>
-                            </div>
-                        </li>
-                        <li>
-                            <div class="f-location-name">
-                                <a href="#">Excel Dental Lynn</a>
-                                <span>-</span>
-                                <a href="tel:+17816715005" class="text-light-green">Call Now</a>
-                            </div>
-                        </li>
-                        <li>
-                            <div class="f-location-name">
-                                <a href="#">Excel Dental Revere</a>
-                                <span>-</span>
-                                <a href="tel:+17817572488" class="text-light-green">Call Now</a>
-                            </div>
+                            <a href="tel:+(91)-79-27602565">+(91)-79-27602565</a>
                         </li>
                     </ul>
                 </div>
             </div>
             <div class="footer-bottom">
-                <p class="m-0">Copyright © <?php echo date('Y'); ?> Excel Dental. All Rights Reserved. The Material presented on this website is
-                    intended for information purposes only,</p>
-                <p class="m-0">is not intended as professional advice, and should not be constructed as such.</p>
+                <p class="mb-0">Copyright © <?php echo date('Y'); ?> <strong>Gyanda Girls' Higher Secondary School</strong>. All
+                    Rights Reserved. Design and Developed By <strong><a href="https://www.tristatetechnology.com/"
+                            target="_blank">TriState Technology</a></strong>.</p>
             </div>
         </div>
     </div>
 </footer>
-
 
 <div class="scroll-top-arrow">
     <i class="fa-solid fa-angle-up"></i>
@@ -146,6 +90,29 @@
 <script src="<?php echo get_template_directory_uri(); ?>/assets/js/main.js"></script>
 
 <?php wp_footer(); ?>
+<!-- Mobile menu arrow -->
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        document.querySelectorAll('.menu-item-has-children').forEach(function(item) {
+            let link = item.querySelector('a');
+            if (link) {
+                let toggle = document.createElement('button');
+                toggle.className = 'dropdown-toggle-icon';
+                toggle.type = 'button';
+                toggle.innerHTML = '<i class="fa-solid fa-angle-down"></i>';
+
+                // Insert button after <a>
+                link.insertAdjacentElement('afterend', toggle);
+
+                toggle.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    item.classList.toggle('open');
+                });
+            }
+        });
+    });
+</script>
+
 </body>
 
 </html>

@@ -9,7 +9,6 @@
 
 .site-header {
   padding: 16px 0;
-  background: #ffffff;
 }
 
 .logo-icon {
@@ -24,4 +23,105 @@
 
 .no-click>a {
   pointer-events: none;
+}
+
+.custom-nav .navbar-list {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+}
+
+.custom-nav .navbar-list .menu-item {
+  position: relative;
+}
+
+.custom-nav .navbar-list .menu-item a {
+  color: #000000;
+}
+
+.custom-nav .navbar-list .menu-item .sub-menu {
+  -ms-transform: scaleY(0);
+  -webkit-transform: scaleY(0);
+  transform: scaleY(0);
+  -ms-transform-origin: 0 0 0;
+  -webkit-transform-origin: 0 0 0;
+  transform-origin: 0 0 0;
+  -webkit-transition: all .35s ease 0s;
+  -moz-transition: all .35s ease 0s;
+  -o-transition: all .35s ease 0s;
+  transition: all .35s ease 0s;
+  visibility: hidden;
+  opacity: 0;
+  position: absolute;
+  top: calc(100% + 10px);
+  left: 0;
+  background: #ffffff;
+  border-radius: 12px;
+  padding: 12px;
+  box-shadow: rgba(0, 0, 0, .15) 0 0 100px;
+  text-align: left
+}
+
+.custom-nav .navbar-list .menu-item .sub-menu li a {
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 24px;
+  padding: 8px 20px;
+  white-space: nowrap;
+  display: inline-block;
+  width: 100%;
+  border-radius: 40px;
+  transition: all .3s;
+  -moz-transition: all .3s;
+  -webkit-transition: all .3s;
+  -ms-transition: all .3s
+}
+
+.custom-nav .navbar-list .menu-item .sub-menu li a:hover {
+  background: #DE1517;
+  color: #ffffff !important;
+}
+
+.dropdown-toggle-icon {
+  background: transparent;
+  padding: 0;
+  border: none;
+  margin-left: 4px;
+  color: #6C5959;
+}
+
+.custom-nav .navbar-list .menu-item:hover .dropdown-toggle-icon {
+  transform: rotate(-90deg);
+  transition: all .3s;
+  -moz-transition: all .3s;
+  -webkit-transition: all .3s;
+  -ms-transition: all .3s
+}
+
+.custom-nav .navbar-list li.current-menu-item>a,
+.custom-nav .navbar-list li.current-menu-parent>a,
+.custom-nav .navbar-list li.current-menu-parent .dropdown-toggle-icon,
+.custom-nav .navbar-list li.current-menu-parent .sub-menu .current-menu-item>a,
+.custom-nav .navbar-list li:hover .dropdown-toggle-icon,
+.custom-nav .navbar-list li:hover>a {
+  color: #DE1517;
+}
+
+.header-fixed .header-inner {
+  backdrop-filter: blur(14px) saturate(140%) brightness(110%);
+  -webkit-backdrop-filter: blur(14px) saturate(140%) brightness(110%);
+  background: rgba(255, 255, 255, 0.80);
+  box-shadow: 0px 16px 24px rgba(0, 0, 0, 0.08);
+  border-radius: 100px;
+  padding: 12px 40px;
+}
+
+@media only screen and (min-width:992px) {
+  .custom-nav .navbar-list .menu-item:hover .sub-menu {
+    opacity: 1;
+    visibility: visible;
+    -ms-transform: scaleY(1);
+    -webkit-transform: scaleY(1);
+    transform: scaleY(1)
+  }
 }

@@ -39,8 +39,7 @@ get_header();
                     $button_url = home_url($button_url);
                 }
                 ?>
-                <a href="<?php echo esc_url($button_url); ?>" target="<?php echo esc_attr($button_target); ?>"
-                    class="default-btn-theme">
+                <a href="<?php echo esc_url($button_url); ?>" class="default-btn-theme">
                     <?php echo esc_html($button_title); ?>
                 </a>
             <?php endif; ?>
@@ -438,7 +437,7 @@ if ($our_facilities) :
     </section>
 <?php endif; ?>
 
-<!--  -->
+<!-- What Students Say Section -->
 <?php
 $what_students_say = get_field('what_students_say_section');
 if ($what_students_say) :
@@ -452,14 +451,14 @@ if ($what_students_say) :
         $what_students_say['testimonial_3'] ?? [],
         $what_students_say['testimonial_4'] ?? [],
         $what_students_say['testimonial_5'] ?? [],
-        $what_students_say['testimonial_6'] ?? [],
-        $what_students_say['testimonial_7'] ?? [],
-        $what_students_say['testimonial_8'] ?? [],
-        $what_students_say['testimonial_9'] ?? [],
-        $what_students_say['testimonial_10'] ?? [],
-        $what_students_say['testimonial_11'] ?? [],
-        $what_students_say['testimonial_12'] ?? [],
-        $what_students_say['testimonial_13'] ?? []
+        // $what_students_say['testimonial_6'] ?? [],
+        // $what_students_say['testimonial_7'] ?? [],
+        // $what_students_say['testimonial_8'] ?? [],
+        // $what_students_say['testimonial_9'] ?? [],
+        // $what_students_say['testimonial_10'] ?? [],
+        // $what_students_say['testimonial_11'] ?? [],
+        // $what_students_say['testimonial_12'] ?? [],
+        // $what_students_say['testimonial_13'] ?? []
     ];
     $section_image_url = '';
     if (is_array($section_image)) {
@@ -553,6 +552,95 @@ if ($what_students_say) :
                     <span class="quote-mark"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/quote-mark.svg" class="w-100" /></span>
                 </div>
             </div>
+        </div>
+    </section>
+<?php endif; ?>
+
+<!-- Awards and Recognition Section -->
+<?php
+$awards = get_field('awards_and_recognition');
+
+if ($awards) :
+
+    $section_title = $awards['section_title'] ?? '';
+    $description   = $awards['description'] ?? '';
+    $images        = $awards['awards_images'] ?? '';
+
+    // Images group
+    $award_images = [
+        $images['image01'] ?? '',
+        $images['image02'] ?? '',
+        $images['image03'] ?? '',
+        $images['image04'] ?? '',
+        $images['image05'] ?? '',
+        $images['image06'] ?? '',
+    ];
+?>
+
+    <section class="cpy-80px">
+        <div class="container">
+            <?php if ($section_title || $description) : ?>
+                <div class="mb-40px text-center">
+                    <?php if ($section_title) : ?>
+                        <h2 class="section-title">
+                            <?php echo esc_html($section_title); ?>
+                        </h2>
+                    <?php endif; ?>
+                    <?php if ($description) : ?>
+                        <div class="section-description">
+                            <?php echo wp_kses_post($description); ?>
+                        </div>
+                    <?php endif; ?>
+                </div>
+            <?php endif; ?>
+
+            <?php
+            // Check if at least one image exists
+            $has_images = false;
+            foreach ($award_images as $image) {
+                if (!empty($image)) {
+                    $has_images = true;
+                    break;
+                }
+            }
+            if ($has_images) :
+            ?>
+                <div class="awards-list">
+                    <?php foreach ($award_images as $image) :
+                        if (empty($image)) {
+                            continue;
+                        }
+                        // ACF Image field returning Image Array
+                        if (is_array($image)) {
+                            $image_url = $image['url'] ?? '';
+                            $image_alt = $image['alt'] ?? '';
+                            // ACF Image field returning Attachment ID
+                        } elseif (is_numeric($image)) {
+                            $image_url = wp_get_attachment_image_url($image, 'full');
+                            $image_alt = get_post_meta(
+                                $image,
+                                '_wp_attachment_image_alt',
+                                true
+                            );
+                            // ACF Image field returning URL
+                        } else {
+                            $image_url = $image;
+                            $image_alt = '';
+                        }
+                        if (!$image_url) {
+                            continue;
+                        }
+                    ?>
+                        <div class="award-item">
+                            <img
+                                src="<?php echo esc_url($image_url); ?>"
+                                alt="<?php echo esc_attr($image_alt); ?>"
+                                class="img-fluid"
+                                loading="lazy">
+                        </div>
+                    <?php endforeach; ?>
+                </div>
+            <?php endif; ?>
         </div>
     </section>
 <?php endif; ?>

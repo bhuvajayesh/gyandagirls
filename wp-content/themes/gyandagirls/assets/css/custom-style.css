@@ -93,7 +93,7 @@ ul {
   text-align: center;
   cursor: pointer;
   position: fixed;
-  bottom: 100px;
+  bottom: 40px;
   right: 40px;
   text-decoration: none;
   z-index: 8;
@@ -467,10 +467,8 @@ ul {
   color: #2F1C1C;
 }
 
-/* ================================================================================= */
 .what-students-say-section {
   position: relative;
-  margin: 0 0 80px;
   background: #FFC00C;
 }
 
@@ -605,4 +603,19 @@ ul {
 .students-say-arrows button:hover {
   background: #30231f;
   color: #fff
+}
+
+.awards-list {
+  display: grid;
+  grid-template-columns: repeat(6, minmax(0, 1fr));
+  gap: 32px;
+}
+
+.awards-list .award-item {
+  background: radial-gradient(50% 50% at 50% 50%, #FFFFFF 0%, #FFF9E7 100%);
+  border-radius: 16px;
+  padding: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }

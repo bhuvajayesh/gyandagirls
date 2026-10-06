@@ -1,9 +1,9 @@
 // Header Fix
 $(window).scroll(function () {
   if ($(this).scrollTop() > 50) {
-    $(".header").addClass("header-fixed");
+    $(".headermain").addClass("header-fixed");
   } else {
-    $(".header").removeClass("header-fixed");
+    $(".headermain").removeClass("header-fixed");
   }
 });
 
