@@ -516,11 +516,11 @@ if ($what_students_say) :
                                                     <h3><?php echo esc_html($student_name); ?></h3>
                                                 <?php endif; ?>
                                                 <?php if ($company_name || $designation) : ?>
-                                                    <span>
+                                                    <p>
                                                         <?php echo esc_html($company_name); ?>
                                                         <?php if ($company_name && $designation) : ?> | <?php endif; ?>
                                                         <?php echo esc_html($designation); ?>
-                                                    </span>
+                                                    </p>
                                                 <?php endif; ?>
                                                 <?php if ($rating) : ?>
                                                     <div class="student-rating">

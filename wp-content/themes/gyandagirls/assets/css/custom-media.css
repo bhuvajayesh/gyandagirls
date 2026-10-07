@@ -12,14 +12,505 @@
     padding-left: 40px;
     padding-right: 40px;
   }
+
+  .custom-nav .navbar-list {
+    gap: 20px;
+  }
+
+  .home-banner-info h1 {
+    font-size: 52px;
+  }
+
+  .section-title {
+    font-size: 40px;
+    line-height: normal;
+  }
+
+  .home-banner {
+    min-height: calc(100vh - 102px);
+  }
+
+  .our-facilities-content {
+    padding: 40px 50px 40px 76px;
+  }
+
+  .facilities-list {
+    gap: 12px;
+  }
+
+  .facility-item span,
+  .students-say-arrows button {
+    font-size: 18px;
+  }
+
+  .what-students-say-wrapper {
+    grid-template-columns: 60% 40%;
+  }
 }
 
-@media only screen and (max-width: 1439px) {}
+@media only screen and (max-width: 1439px) {
+  .default-btn-theme {
+    padding: 12px 24px;
+  }
 
-@media only screen and (max-width: 1279px) {}
+  .logo-icon {
+    height: 50px;
+  }
 
-@media only screen and (max-width: 1199px) {}
+  .header-fixed .header-inner {
+    padding: 12px 36px;
+  }
 
-@media only screen and (max-width: 1023px) {}
+  .custom-nav .navbar-list {
+    gap: 16px;
+  }
 
-@media only screen and (max-width: 767px) {}
+  .home-banner {
+    min-height: calc(100vh - 82px);
+  }
+
+  .page-overlay {
+    padding-top: 82px;
+  }
+
+  .our-facilities-content {
+    padding: 40px 40px 40px 70px;
+  }
+
+  .facilities-list {
+    gap: 8px;
+    margin-top: 24px;
+  }
+
+  .facility-item {
+    gap: 8px;
+  }
+
+  .facility-item span {
+    font-size: 16px;
+  }
+
+  .facility-icon {
+    width: 40px;
+  }
+
+  .facility-icon img {
+    width: 50%;
+  }
+
+  .testimonial-description {
+    font-size: 14px;
+    line-height: normal;
+  }
+
+  .students-say-intro {
+    margin: 0 0 20px;
+  }
+
+  .students-say-card .quote-mark {
+    top: 200px;
+    width: 120px;
+  }
+
+  .students-say-arrows {
+    margin-top: 20px;
+  }
+}
+
+@media only screen and (max-width: 1279px) {
+  .custom-nav .navbar-list .menu-item a {
+    font-size: 14px;
+  }
+
+  .footer-links-grid {
+    grid-template-columns: 1fr 16% 16% 32%;
+    gap: 24px;
+  }
+}
+
+@media only screen and (max-width: 1199px) {
+  .site-header .primary-navigation {
+    position: fixed;
+    width: 100%;
+    left: 0px;
+    top: 0;
+    background: #fff;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease-in-out;
+    z-index: -1;
+    padding-top: 82px;
+    border-radius: 16px;
+  }
+
+  .toggleButton {
+    width: 30px;
+    height: 20px;
+    border: none;
+    background: transparent;
+    border-radius: 4px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: space-between;
+  }
+
+  .toggleButton span {
+    width: 100%;
+    height: 3px;
+    background: #DE1517;
+    transition: all 0.3s ease-in-out;
+  }
+
+  .toggleButton span.two,
+  .toggleButton.toggle-open span {
+    width: 75%;
+  }
+
+  .toggleButton.toggle-open span:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+  }
+
+  .toggleButton.toggle-open span:nth-child(2) {
+    opacity: 0;
+  }
+
+  .toggleButton.toggle-open span:nth-child(3) {
+    transform: rotate(-45deg) translate(7px, -7px);
+  }
+
+  .site-header .primary-navigation.menu-open {
+    visibility: visible;
+    opacity: 1;
+  }
+
+  .site-header .primary-navigation:not(.menu-open) {
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-10px);
+  }
+
+  .site-header .navbar-list {
+    flex-direction: column;
+    width: 100%;
+    align-items: flex-start;
+    padding: 20px;
+    max-height: 70vh;
+    overflow-y: auto;
+  }
+
+  .site-header .navbar-list .menu-item {
+    position: relative;
+    width: 100%;
+    text-align: left;
+  }
+
+  .dropdown-toggle-icon {
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 0px 16px;
+    border: none;
+    border-left: 1px solid #eeeeee;
+    font-size: 16px;
+    color: #DE1517;
+    border-radius: 0;
+    background: transparent;
+
+  }
+
+  .site-header .navbar-list .menu-item .sub-menu {
+    display: none;
+    position: relative;
+    top: 100%;
+    left: 0;
+    background: transparent;
+    flex-direction: column;
+    border-radius: 0px;
+    min-width: 220px;
+    box-shadow: none;
+    z-index: 1000;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-10px);
+    transition: all 0.3s ease-in-out;
+    margin-top: 8px;
+    padding: 0px;
+    padding-left: 20px;
+  }
+
+  .site-header .navbar-list .menu-item.submenu-open .sub-menu {
+    display: flex;
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+  }
+
+  .site-header .navbar-list .sub-menu li {
+    margin: 0;
+  }
+
+  .site-header .navbar-list .menu-item .sub-menu li a {
+    padding: 6px 12px;
+  }
+
+  .custom-nav .navbar-list .menu-item:hover .dropdown-toggle-icon {
+    transform: inherit;
+  }
+
+  .custom-nav .navbar-list .menu-item a {
+    font-size: 16px;
+  }
+
+  .header-inner .header-actions {
+    margin-left: auto;
+    margin-right: 20px;
+  }
+
+  .home-banner-info h1 {
+    font-size: 44px;
+  }
+
+  .text-18px,
+  .student-rating i {
+    font-size: 16px;
+  }
+
+  .cpy-80px {
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
+
+  .section-title {
+    font-size: 32px;
+  }
+
+  .our-facilities-content {
+    padding: 40px 40px 40px 60px;
+  }
+
+  .flex-center-gap80,
+  .our-facilities-wrapper {
+    gap: 40px;
+  }
+
+  .experience-badge {
+    width: 140px;
+  }
+
+  .mb-40px {
+    margin-bottom: 24px;
+  }
+
+  .statistics-card .statistics-icon,
+  .why-choose-card .why-choose-card-icons {
+    width: 50px;
+  }
+
+  .statistics-card .statistics-icon img,
+  .why-choose-card .why-choose-card-icons img {
+    width: 50%;
+  }
+
+  .statistics-card .statistics-label {
+    font-size: 16px;
+  }
+
+  .statistics-card .statistics-number {
+    font-size: 24px;
+  }
+
+  .education-grid .education-card p,
+  .why-choose-card p,
+  .footer-bottom {
+    font-size: 14px;
+    line-height: normal;
+  }
+
+  .awards-list,
+  .why-choose-grid {
+    gap: 24px;
+  }
+
+  .why-choose-card .feature-bg-icon {
+    width: 60px;
+  }
+
+  .students-say-card {
+    padding: 40px;
+  }
+
+  .what-students-say-wrapper {
+    grid-template-columns: 55% 45%;
+  }
+
+  .students-say-content {
+    right: 80px;
+  }
+
+  .students-say-card .quote-mark {
+    display: none;
+  }
+
+  .footer-links-grid {
+    grid-template-columns: repeat(4, 1fr);
+    padding-top: 40px;
+  }
+
+  .footer-about {
+    grid-column: span 4;
+  }
+
+  .footer-links.footer-contact-info {
+    grid-column: span 2;
+  }
+}
+
+@media only screen and (max-width: 1023px) {
+  .flex-center-gap80 {
+    flex-direction: column;
+  }
+
+  .statistics-grid,
+  .education-grid,
+  .why-choose-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .our-facilities-wrapper {
+    grid-template-columns: repeat(1, minmax(0, 1fr));
+  }
+
+  .experience-badge {
+    display: none;
+  }
+
+  .our-facilities-content {
+    padding: 40px;
+  }
+
+  .what-students-say-wrapper {
+    grid-template-columns: 50% 50%;
+  }
+
+  .students-say-content {
+    right: 50px;
+  }
+
+  .students-say-card {
+    padding: 30px;
+  }
+
+  .student-image {
+    width: 70px;
+  }
+
+  .students-say-intro {
+    font-size: 14px;
+  }
+
+  .awards-list {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .container {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .container {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+
+  .home-banner-info {
+    padding: 16px 0;
+  }
+
+  .home-banner-info label {
+    font-size: 18px;
+  }
+
+  .home-banner-info h1 {
+    font-size: 32px;
+  }
+
+  .home-banner-info p {
+    font-size: 14px;
+    line-height: normal;
+  }
+
+  .header-fixed .header-inner {
+    padding: 12px 24px;
+  }
+
+  .cpy-80px {
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
+
+  .img-radius-42px,
+  .ourFacilitiesSwiper,
+  .our-facilities-content {
+    border-radius: 24px;
+  }
+
+  .section-title {
+    font-size: 24px;
+  }
+
+  .statistics-grid,
+  .education-grid,
+  .why-choose-grid,
+  .awards-list {
+    gap: 16px;
+  }
+
+  .statistics-grid,
+  .education-grid,
+  .why-choose-grid,
+  .what-students-say-wrapper {
+    grid-template-columns: repeat(1, minmax(0, 1fr));
+  }
+
+  .our-facilities-content {
+    padding: 20px;
+  }
+
+  .students-video-btn {
+    width: 60px;
+  }
+
+  .students-say-content {
+    right: 0;
+    padding-bottom: 20px;
+  }
+
+  .students-say-card {
+    padding: 20px;
+  }
+
+  .facility-item span {
+    font-size: 15px;
+  }
+
+  .awards-list {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .footer-links-grid {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .footer-about,
+  .footer-links {
+    grid-column: span 2;
+  }
+
+  .scroll-top-arrow {
+    bottom: 100px;
+    right: 20px;
+  }
+}

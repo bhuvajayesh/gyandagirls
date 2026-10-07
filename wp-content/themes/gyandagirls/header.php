@@ -45,12 +45,6 @@
                         </a>
                     </div>
 
-                    <button class="toggleButton d-xl-none" aria-label="Toggle menu" aria-expanded="false">
-                        <span class="one"></span>
-                        <span class="two"></span>
-                        <span class="three"></span>
-                    </button>
-
                     <nav class="primary-navigation custom-nav" role="navigation" aria-label="Primary Navigation">
                         <?php
                         wp_nav_menu(array(
@@ -59,11 +53,20 @@
                             'menu_class' => 'navbar-list',
                         ));
                         ?>
+                        <div class="header-actions d-block d-md-none pt-0 p-3 me-0">
+                            <a href="<?php echo site_url(); ?>/contact-us" class="default-btn-theme w-100 text-center">Contact Us</a>
+                        </div>
                     </nav>
 
-                    <div class="header-actions">
+                    <div class="header-actions d-none d-md-block">
                         <a href="<?php echo site_url(); ?>/contact-us" class="default-btn-theme">Contact Us</a>
                     </div>
+
+                    <button class="toggleButton d-xl-none" aria-label="Toggle menu" aria-expanded="false">
+                        <span class="one"></span>
+                        <span class="two"></span>
+                        <span class="three"></span>
+                    </button>
                 </div>
             </div>
         </div>

@@ -197,7 +197,7 @@ ul {
 .home-banner {
   background: url(../images/home-banner.jpg) no-repeat;
   background-size: cover;
-  height: 880px;
+  min-height: 880px;
   display: flex;
   align-items: center;
   text-align: center;
@@ -216,6 +216,7 @@ ul {
 
 .home-banner-info h1 {
   font-size: 64px;
+  line-height: normal;
   font-weight: 700;
   margin: 4px 0 12px 0;
 }
@@ -318,7 +319,7 @@ ul {
 .why-choose-card .feature-bg-icon {
   display: block;
   width: 80px;
-  height: 80px;
+  aspect-ratio: 1;
   background-color: var(--icon-color);
   -webkit-mask: var(--icon) center/contain no-repeat;
   mask: var(--icon) center/contain no-repeat;
@@ -380,7 +381,7 @@ ul {
   top: 50%;
   transform: translate(-50%, -50%);
   width: 180px;
-  height: 180px;
+  aspect-ratio: 1;
   z-index: 5;
 }
 
@@ -497,18 +498,20 @@ ul {
   top: 50%;
   transform: translate(-50%, -50%);
   width: 110px;
-  height: 111px;
+  aspect-ratio: 1;
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
   z-index: 2;
+  background-size: contain;
 }
 
 .students-say-content {
   position: relative;
   right: 160px;
-  z-index: 3
+  z-index: 3;
+  padding-bottom: 40px;
 }
 
 .students-say-card {
@@ -533,7 +536,7 @@ ul {
 
 .student-image {
   width: 80px;
-  height: 80px;
+  aspect-ratio: 1;
   border-radius: 50%;
   object-fit: cover;
 }
@@ -545,7 +548,7 @@ ul {
   color: #000000;
 }
 
-.student-details>span {
+.student-details>p {
   font-size: 14px;
   font-weight: 500;
   color: #6C5959;
@@ -562,6 +565,7 @@ ul {
 .student-rating i {
   font-size: 20px;
   color: #FFC00C;
+  line-height: normal;
 }
 
 .testimonial-description {
@@ -583,7 +587,7 @@ ul {
   display: flex;
   justify-content: flex-end;
   gap: 12px;
-  margin-top: 80px;
+  margin-top: 40px;
   position: relative;
   z-index: 3
 }
@@ -618,4 +622,25 @@ ul {
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+.inner-banner-breadcrumbs {
+  padding: 12px 0;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  line-height: 20px;
+  font-size: 14px;
+  color: #595b66;
+}
+
+.inner-banner-breadcrumbs .page-name {
+  color: #DE1517;
+}
+
+.inner-banner {
+  background: url(../images/home-banner.jpg) no-repeat center center;
+  background-size: cover;
+  padding-top: 8%;
+  padding-bottom: 8%;
 }
