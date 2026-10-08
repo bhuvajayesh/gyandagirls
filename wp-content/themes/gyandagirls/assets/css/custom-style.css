@@ -172,6 +172,7 @@ ul {
   text-decoration: none;
   border-radius: 50px;
   border: none;
+  transition-duration: 0.4s;
 }
 
 .default-btn-theme:hover {
@@ -284,6 +285,11 @@ ul {
   overflow: hidden;
   border-radius: 16px;
   margin-bottom: 16px;
+  transition-duration: 0.4s;
+}
+
+.education-card:hover .education-card-image img {
+  transform: scale(1.08);
 }
 
 .education-grid .education-card h3 {
@@ -492,7 +498,6 @@ ul {
 }
 
 .students-video-btn {
-  background: url(../images/play-icon.svg) no-repeat;
   position: absolute;
   left: 50%;
   top: 50%;
@@ -504,8 +509,59 @@ ul {
   align-items: center;
   justify-content: center;
   z-index: 2;
-  background-size: contain;
 }
+
+/* ================== */
+.students-video-btn img {
+  width: 90px;
+  height: 90px;
+  display: block;
+  position: relative;
+  z-index: 2;
+  animation: playPulse 2s ease-in-out infinite;
+}
+
+.students-video-btn::before,
+.students-video-btn::after {
+  content: "";
+  position: absolute;
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  border: 2px solid #fff;
+  z-index: 1;
+  animation: playRipple 3s ease-out infinite;
+}
+
+.students-video-btn::after {
+  animation-delay: 1s;
+}
+
+@keyframes playRipple {
+  0% {
+    transform: scale(1);
+    opacity: 0.8;
+  }
+
+  100% {
+    transform: scale(1.4);
+    opacity: 0;
+  }
+}
+
+@keyframes playPulse {
+
+  0%,
+  100% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(1.05);
+  }
+}
+
+/* ================== */
 
 .students-say-content {
   position: relative;
@@ -622,6 +678,12 @@ ul {
   display: flex;
   align-items: center;
   justify-content: center;
+  overflow: hidden;
+  transition-duration: 0.4s;
+}
+
+.awards-list .award-item:hover img {
+  transform: scale(1.08);
 }
 
 .inner-banner-breadcrumbs {

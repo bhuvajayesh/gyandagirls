@@ -127,7 +127,8 @@ if ($school_statistics):
                                                                                                                         ? $background_image['url']
                                                                                                                         : $background_image
                                                                                                                 );
-                                                                                                                ?>');" <?php endif; ?>>
+                                                                                                                ?>');"
+        <?php endif; ?>>
 
         <div class="container">
             <div class="text-center">
@@ -137,7 +138,7 @@ if ($school_statistics):
                     </h2>
                 <?php endif; ?>
                 <?php if ($description): ?>
-                    <div class="mb-4 text-white">
+                    <div class="mb-40px text-white">
                         <?php echo esc_html($description); ?>
                     </div>
                 <?php endif; ?>
@@ -273,7 +274,7 @@ if ($education_section):
 <!-- Why Choose Us Section -->
 <?php
 $why_choose_section = get_field('why_choose_section');
-if ($why_choose_section) :
+if ($why_choose_section):
     $section_title = $why_choose_section['section_title'] ?? '';
     $description = $why_choose_section['description'] ?? '';
     $cards = [
@@ -287,19 +288,19 @@ if ($why_choose_section) :
 ?>
     <section class="bg-light cpy-80px">
         <div class="container">
-            <?php if ($section_title || $description) : ?>
+            <?php if ($section_title || $description): ?>
                 <div class="text-center">
-                    <?php if ($section_title) : ?>
+                    <?php if ($section_title): ?>
                         <h2 class="section-title"><?php echo esc_html($section_title); ?></h2>
                     <?php endif; ?>
-                    <?php if ($description) : ?>
-                        <p><?php echo esc_html($description); ?></p>
+                    <?php if ($description): ?>
+                        <p class="mb-40px"><?php echo esc_html($description); ?></p>
                     <?php endif; ?>
                 </div>
             <?php endif; ?>
             <div class="why-choose-grid">
-                <?php foreach ($cards as $card) : ?>
-                    <?php if (!empty($card)) :
+                <?php foreach ($cards as $card): ?>
+                    <?php if (!empty($card)):
                         $icon = $card['icon'] ?? '';
                         $title = $card['title'] ?? '';
                         $card_description = $card['description'] ?? '';
@@ -315,16 +316,18 @@ if ($why_choose_section) :
                         }
                     ?>
                         <div class="why-choose-card">
-                            <?php if ($icon_url) : ?>
-                                <span class="feature-bg-icon" style="--icon:url('<?php echo esc_url($icon_url); ?>');--icon-color:<?php echo esc_attr($icon_color); ?>;"></span>
+                            <?php if ($icon_url): ?>
+                                <span class="feature-bg-icon"
+                                    style="--icon:url('<?php echo esc_url($icon_url); ?>');--icon-color:<?php echo esc_attr($icon_color); ?>;"></span>
                                 <div class="why-choose-card-icons">
-                                    <img src="<?php echo esc_url($icon_url); ?>" class="feature-icon" alt="<?php echo esc_attr($title); ?>">
+                                    <img src="<?php echo esc_url($icon_url); ?>" class="feature-icon"
+                                        alt="<?php echo esc_attr($title); ?>">
                                 </div>
                             <?php endif; ?>
-                            <?php if ($title) : ?>
+                            <?php if ($title): ?>
                                 <h3><?php echo esc_html($title); ?></h3>
                             <?php endif; ?>
-                            <?php if ($card_description) : ?>
+                            <?php if ($card_description): ?>
                                 <p><?php echo esc_html($card_description); ?></p>
                             <?php endif; ?>
                         </div>
@@ -338,7 +341,7 @@ if ($why_choose_section) :
 <!-- Our Facilities -->
 <?php
 $our_facilities = get_field('our_facilities_section');
-if ($our_facilities) :
+if ($our_facilities):
     $slider_group = $our_facilities['our_facilities_slider'] ?? [];
     $experience_badge = $our_facilities['experience_badge'] ?? '';
     $section_title = $our_facilities['section_title'] ?? '';
@@ -373,8 +376,9 @@ if ($our_facilities) :
                 <div class="our-facilities-slider">
                     <div class="swiper ourFacilitiesSwiper">
                         <div class="swiper-wrapper">
-                            <?php foreach ($sliders as $slider) :
-                                if (empty($slider)) continue;
+                            <?php foreach ($sliders as $slider):
+                                if (empty($slider))
+                                    continue;
                                 $slider_url = '';
                                 if (is_array($slider)) {
                                     $slider_url = $slider['url'] ?? '';
@@ -383,32 +387,34 @@ if ($our_facilities) :
                                 } elseif (is_string($slider)) {
                                     $slider_url = $slider;
                                 }
-                                if ($slider_url) :
+                                if ($slider_url):
                             ?>
                                     <div class="swiper-slide">
-                                        <img src="<?php echo esc_url($slider_url); ?>" alt="<?php echo esc_attr($section_title); ?>">
+                                        <img src="<?php echo esc_url($slider_url); ?>"
+                                            alt="<?php echo esc_attr($section_title); ?>">
                                     </div>
                             <?php endif;
                             endforeach; ?>
                         </div>
                         <div class="swiper-pagination"></div>
                     </div>
-                    <?php if ($badge_url) : ?>
+                    <?php if ($badge_url): ?>
                         <div class="experience-badge">
                             <img src="<?php echo esc_url($badge_url); ?>" alt="Years of Experience">
                         </div>
                     <?php endif; ?>
                 </div>
                 <div class="our-facilities-content">
-                    <?php if ($section_title) : ?>
+                    <?php if ($section_title): ?>
                         <h2 class="section-title"><?php echo esc_html($section_title); ?></h2>
                     <?php endif; ?>
-                    <?php if ($section_description) : ?>
+                    <?php if ($section_description): ?>
                         <p class="m-0"><?php echo wp_kses_post($section_description); ?></p>
                     <?php endif; ?>
                     <div class="facilities-list">
-                        <?php foreach ($facilities as $facility) :
-                            if (empty($facility)) continue;
+                        <?php foreach ($facilities as $facility):
+                            if (empty($facility))
+                                continue;
                             $icon = $facility['icon'] ?? '';
                             $title = $facility['title'] ?? '';
                             $icon_url = '';
@@ -419,10 +425,11 @@ if ($our_facilities) :
                             } elseif (is_string($icon)) {
                                 $icon_url = $icon;
                             }
-                            if (!$title) continue;
+                            if (!$title)
+                                continue;
                         ?>
                             <div class="facility-item">
-                                <?php if ($icon_url) : ?>
+                                <?php if ($icon_url): ?>
                                     <span class="facility-icon">
                                         <img src="<?php echo esc_url($icon_url); ?>" alt="<?php echo esc_attr($title); ?>">
                                     </span>
@@ -440,7 +447,7 @@ if ($our_facilities) :
 <!-- What Students Say Section -->
 <?php
 $what_students_say = get_field('what_students_say_section');
-if ($what_students_say) :
+if ($what_students_say):
     $section_image = $what_students_say['section_image'] ?? '';
     $video_url = $what_students_say['video_url'] ?? '';
     $section_title = $what_students_say['section_title'] ?? '';
@@ -472,23 +479,29 @@ if ($what_students_say) :
     <section class="what-students-say-section">
         <div class="what-students-say-wrapper">
             <div class="students-say-image">
-                <?php if ($section_image_url) : ?>
-                    <img src="<?php echo esc_url($section_image_url); ?>" alt="<?php echo esc_attr($section_title); ?>" class="students-say-video-thumbnail">
+                <?php if ($section_image_url): ?>
+                    <img src="<?php echo esc_url($section_image_url); ?>" alt="<?php echo esc_attr($section_title); ?>"
+                        class="students-say-video-thumbnail">
                 <?php endif; ?>
-                <a href="<?php echo esc_url($video_url); ?>" class="students-video-btn" target="_blank" rel="noopener" aria-label="Watch video"></a>
+                <a href="<?php echo esc_url($video_url); ?>" class="students-video-btn" target="_blank" rel="noopener"
+                    aria-label="Watch video">
+                    <img
+                        src="<?php echo get_template_directory_uri(); ?>/assets/images/play-icon.svg" class="w-100" />
+                </a>
             </div>
             <div class="students-say-content">
                 <div class="students-say-card">
-                    <?php if ($section_title) : ?>
+                    <?php if ($section_title): ?>
                         <h2 class="section-title mb-2"><?php echo esc_html($section_title); ?></h2>
                     <?php endif; ?>
-                    <?php if ($section_description) : ?>
+                    <?php if ($section_description): ?>
                         <p class="students-say-intro"><?php echo esc_html($section_description); ?></p>
                     <?php endif; ?>
                     <div class="swiper studentsSaySwiper">
                         <div class="swiper-wrapper">
-                            <?php foreach ($testimonials as $testimonial) :
-                                if (empty($testimonial)) continue;
+                            <?php foreach ($testimonials as $testimonial):
+                                if (empty($testimonial))
+                                    continue;
                                 $student_image = $testimonial['student_image'] ?? '';
                                 $student_name = $testimonial['student_name'] ?? '';
                                 $company_name = $testimonial['company_name'] ?? '';
@@ -510,26 +523,27 @@ if ($what_students_say) :
                                 <div class="swiper-slide">
                                     <div class="student-testimonial">
                                         <div class="student-info">
-                                            <img src="<?php echo esc_url($student_image_url); ?>" alt="<?php echo esc_attr($student_name); ?>" class="student-image">
+                                            <img src="<?php echo esc_url($student_image_url); ?>"
+                                                alt="<?php echo esc_attr($student_name); ?>" class="student-image">
                                             <div class="student-details">
-                                                <?php if ($student_name) : ?>
+                                                <?php if ($student_name): ?>
                                                     <h3><?php echo esc_html($student_name); ?></h3>
                                                 <?php endif; ?>
-                                                <?php if ($company_name || $designation) : ?>
+                                                <?php if ($company_name || $designation): ?>
                                                     <p>
                                                         <?php echo esc_html($company_name); ?>
-                                                        <?php if ($company_name && $designation) : ?> | <?php endif; ?>
+                                                        <?php if ($company_name && $designation): ?> | <?php endif; ?>
                                                         <?php echo esc_html($designation); ?>
                                                     </p>
                                                 <?php endif; ?>
-                                                <?php if ($rating) : ?>
+                                                <?php if ($rating): ?>
                                                     <div class="student-rating">
-                                                        <?php for ($i = 1; $i <= 5; $i++) : ?>
-                                                            <?php if ($rating >= $i) : ?>
+                                                        <?php for ($i = 1; $i <= 5; $i++): ?>
+                                                            <?php if ($rating >= $i): ?>
                                                                 <i class="fas fa-star"></i>
-                                                            <?php elseif ($rating >= ($i - 0.5)) : ?>
+                                                            <?php elseif ($rating >= ($i - 0.5)): ?>
                                                                 <i class="fas fa-star-half-alt"></i>
-                                                            <?php else : ?>
+                                                            <?php else: ?>
                                                                 <i class="far fa-star"></i>
                                                             <?php endif; ?>
                                                         <?php endfor; ?>
@@ -537,7 +551,7 @@ if ($what_students_say) :
                                                 <?php endif; ?>
                                             </div>
                                         </div>
-                                        <?php if ($testimonial_description) : ?>
+                                        <?php if ($testimonial_description): ?>
                                             <p class="testimonial-description"><?php echo esc_html($testimonial_description); ?></p>
                                         <?php endif; ?>
                                     </div>
@@ -545,11 +559,15 @@ if ($what_students_say) :
                             <?php endforeach; ?>
                         </div>
                         <div class="students-say-arrows">
-                            <button type="button" class="students-say-prev" aria-label="Previous testimonial"><i class="fa-solid fa-arrow-left-long"></i></button>
-                            <button type="button" class="students-say-next" aria-label="Next testimonial"><i class="fa-solid fa-arrow-right-long"></i></button>
+                            <button type="button" class="students-say-prev" aria-label="Previous testimonial"><i
+                                    class="fa-solid fa-arrow-left-long"></i></button>
+                            <button type="button" class="students-say-next" aria-label="Next testimonial"><i
+                                    class="fa-solid fa-arrow-right-long"></i></button>
                         </div>
                     </div>
-                    <span class="quote-mark"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/quote-mark.svg" class="w-100" /></span>
+                    <span class="quote-mark"><img
+                            src="<?php echo get_template_directory_uri(); ?>/assets/images/quote-mark.svg"
+                            class="w-100" /></span>
                 </div>
             </div>
         </div>
@@ -560,11 +578,11 @@ if ($what_students_say) :
 <?php
 $awards = get_field('awards_and_recognition');
 
-if ($awards) :
+if ($awards):
 
     $section_title = $awards['section_title'] ?? '';
-    $description   = $awards['description'] ?? '';
-    $images        = $awards['awards_images'] ?? '';
+    $description = $awards['description'] ?? '';
+    $images = $awards['awards_images'] ?? '';
 
     // Images group
     $award_images = [
@@ -579,14 +597,14 @@ if ($awards) :
 
     <section class="cpy-80px">
         <div class="container">
-            <?php if ($section_title || $description) : ?>
+            <?php if ($section_title || $description): ?>
                 <div class="mb-40px text-center">
-                    <?php if ($section_title) : ?>
+                    <?php if ($section_title): ?>
                         <h2 class="section-title">
                             <?php echo esc_html($section_title); ?>
                         </h2>
                     <?php endif; ?>
-                    <?php if ($description) : ?>
+                    <?php if ($description): ?>
                         <div class="section-description">
                             <?php echo wp_kses_post($description); ?>
                         </div>
@@ -603,10 +621,10 @@ if ($awards) :
                     break;
                 }
             }
-            if ($has_images) :
+            if ($has_images):
             ?>
                 <div class="awards-list">
-                    <?php foreach ($award_images as $image) :
+                    <?php foreach ($award_images as $image):
                         if (empty($image)) {
                             continue;
                         }
@@ -632,11 +650,8 @@ if ($awards) :
                         }
                     ?>
                         <div class="award-item">
-                            <img
-                                src="<?php echo esc_url($image_url); ?>"
-                                alt="<?php echo esc_attr($image_alt); ?>"
-                                class="img-fluid"
-                                loading="lazy">
+                            <img src="<?php echo esc_url($image_url); ?>" alt="<?php echo esc_attr($image_alt); ?>"
+                                class="img-fluid" loading="lazy">
                         </div>
                     <?php endforeach; ?>
                 </div>

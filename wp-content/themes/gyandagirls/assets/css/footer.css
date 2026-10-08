@@ -87,3 +87,8 @@
 .footer-bottom strong {
   font-weight: 600;
 }
+
+.footer-links ul li a:hover,
+.footer-bottom a:hover {
+  color: #DE1517;
+}
